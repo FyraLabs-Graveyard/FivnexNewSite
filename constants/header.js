@@ -25,7 +25,7 @@ document.addEventListener("scroll", (e) => {
 });
 
 return `
-    <div class="header header-float">
+    <div class="header ${initScroll}">
         <div class="breathable-container">
             h
         </div>
