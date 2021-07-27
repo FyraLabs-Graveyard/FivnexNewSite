@@ -23,8 +23,10 @@ setTimeout(() => {
                   }
 
                   document.getElementById(random).innerHTML = `
-                        <h2>${datab.title}</h2>
-                        <p>${readTimeText}</p>
+                        <div>
+                            <h2>${datab.title}</h2>
+                            <p>${readTimeText}</p>
+                        </div>
                     `;
 
                   document
@@ -60,8 +62,10 @@ setTimeout(() => {
 
 return `
     <div id="${random}" class="caro-card">
-    <div style="margin-bottom: 5px; height: 30px; width: 90%; border-radius: 5px;" class="skel"></div>
-    <div style="margin-bottom: 10px; height: 30px; width: 30%; border-radius: 5px;" class="skel"></div>
-    <div style="height: 15px; width: 40%; border-radius: 5px;" class="skel"></div>
+        <div>
+            <div style="margin-bottom: 5px; height: 30px; width: 90%; border-radius: 5px;" class="skel"></div>
+            <div style="margin-bottom: 10px; height: 30px; width: 30%; border-radius: 5px;" class="skel"></div>
+            <div style="height: 15px; width: 40%; border-radius: 5px;" class="skel"></div>
+        </div>
     </div>
 `;
