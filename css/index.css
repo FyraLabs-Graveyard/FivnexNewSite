@@ -78,6 +78,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .caro-card {
+    margin-bottom: 20px;
+  }
   .mid-container-flex {
     display: block;
   }

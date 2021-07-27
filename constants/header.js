@@ -1,10 +1,22 @@
+var initScroll = "header-float";
+
+if (window.location.pathname == "/") {
+  initScroll = "header-top";
+}
+
 document.addEventListener("scroll", (e) => {
   const scroll = window.scrollY;
 
-  if (scroll == 0) {
-    document
-      .getElementsByClassName("header")[0]
-      .setAttribute("class", "header header-top");
+  if (window.location.pathname == "/") {
+    if (scroll == 0) {
+      document
+        .getElementsByClassName("header")[0]
+        .setAttribute("class", "header header-top");
+    } else {
+      document
+        .getElementsByClassName("header")[0]
+        .setAttribute("class", "header header-float");
+    }
   } else {
     document
       .getElementsByClassName("header")[0]
@@ -13,7 +25,7 @@ document.addEventListener("scroll", (e) => {
 });
 
 return `
-    <div class="header header-top">
+    <div class="header header-float">
         <div class="breathable-container">
             h
         </div>
