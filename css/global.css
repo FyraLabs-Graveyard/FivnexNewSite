@@ -1,0 +1,80 @@
+:root {
+  --body-color: 255, 255, 255;
+  --body-color-opposite: 0, 0, 0;
+  --red: 255, 0, 0;
+  --bezier: ;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(var(--body-color));
+}
+
+* {
+  font-family: "Inter";
+}
+
+@media only screen and (min-width: 729px) {
+  .breathable-container {
+    margin: 0 20% 0 20%;
+  }
+}
+
+@media only screen and (max-width: 728px) {
+  .breathable-container {
+    margin: 0 5% 0 5%;
+  }
+}
+
+.skel {
+  background-color: rgba(var(--body-color-opposite), 0.1);
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: padding 0.2s var(--bezier), box-shadow 0.2s var(--bezier),
+    opacity 0.2s var(--bezier);
+}
+.header-top {
+  opacity: 0;
+  padding: 30px 0 30px 0;
+  box-shadow: 0;
+}
+.header-float {
+  opacity: 1;
+  padding: 20px 0 20px 0;
+  background-color: rgb(var(--body-color));
+  box-shadow: 0px 8px 24px rgba(var(--body-color-opposite), 0.15);
+}

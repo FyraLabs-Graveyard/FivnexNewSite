@@ -1,0 +1,103 @@
+.mid-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 90%;
+}
+.mid-container-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+.section {
+  height: 100vh;
+}
+
+.mid-container-flex > div {
+  align-self: center;
+}
+
+.mid-container-flex > div > img {
+  height: 70px;
+}
+
+.mid-container-flex > .seperator-div {
+  width: 2px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+.mid-container-flex > div > h1 {
+  font-size: 40px;
+}
+
+.home-section-2 {
+  background-color: rgba(var(--body-color-opposite), 0.05);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.caro-card:hover {
+  background-color: rgb(var(--red));
+  box-shadow: 0px 8px 24px rgba(var(--body-color-opposite), 0.15);
+  transform: translateY(-5px);
+  color: white;
+}
+
+.caro-card:active {
+  transform: translateY(0px);
+}
+
+.caro-card {
+  width: 100%;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  transition: transform 0.2s cubic-bezier(0, 1, 0.55, 0.97),
+    box-shadow 0.2s cubic-bezier(0, 1, 0.55, 0.97),
+    background-color 0.2s cubic-bezier(0, 1, 0.55, 0.97);
+}
+.caro-card > * {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.caro-card-hidden {
+  animation: hide 0.2s forwards ease;
+}
+
+@media only screen and (min-width: 769px) {
+  .recent-news-caro {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mid-container-flex {
+    display: block;
+  }
+  .mid-container-flex > div > h1 {
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+  }
+  .mid-container-flex > div > img {
+    margin: auto;
+    width: 100%;
+    height: 50px;
+  }
+  .mid-container-flex > .seperator-div {
+    width: 60%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
