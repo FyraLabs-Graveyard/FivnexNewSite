@@ -1,8 +1,5 @@
-:root {
-  --body-color: 255, 255, 255;
-  --body-color-opposite: 0, 0, 0;
-  --red: 255, 0, 0;
-  --bezier: ;
+body {
+  margin: 0;
 }
 
 @font-face {
@@ -21,60 +18,41 @@
   font-display: block;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: rgb(var(--body-color));
-}
-
 * {
   font-family: "Inter";
 }
 
-@media only screen and (min-width: 729px) {
-  .breathable-container {
-    margin: 0 20% 0 20%;
-  }
-}
-
 @media only screen and (max-width: 728px) {
-  .breathable-container {
-    margin: 0 5% 0 5%;
+  .content {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 
-.skel {
-  background-color: rgba(var(--body-color-opposite), 0.1);
+@media only screen and (min-width: 729px) {
+  .content {
+    margin-right: 20%;
+    margin-left: 20%;
+  }
 }
 
-@keyframes hide {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  transition: padding 0.2s var(--bezier), box-shadow 0.2s var(--bezier),
-    opacity 0.2s var(--bezier);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 35px;
 }
-.header-top {
-  opacity: 0;
-  padding: 30px 0 30px 0;
-  box-shadow: 0;
+
+.headerLogo {
+  filter: grayscale(1);
+  height: 100%;
 }
-.header-float {
-  opacity: 1;
-  padding: 20px 0 20px 0;
-  background-color: rgb(var(--body-color));
-  box-shadow: 0px 8px 24px rgba(var(--body-color-opposite), 0.15);
+.headerLogo img {
+  height: 100%;
 }
